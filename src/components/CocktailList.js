@@ -16,12 +16,19 @@ const CocktailList = () => {
         no cocktails matches your search criteria
       </h2>
     )
-  }
+  };
 
   return (
-    <div>
-      <h2>cocktail list component</h2>
-    </div>
+    <section className ="section">
+      <h2 className ="section-title">
+        Cocktails
+      </h2>
+      <div className ="cocktails-center">
+        {cocktails.map((item) => {
+          return <Cocktail key ={item.id} {...item} />;
+        })}
+      </div>
+    </section>
   );
 };
 
